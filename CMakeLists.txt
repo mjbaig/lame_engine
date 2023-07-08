@@ -15,20 +15,15 @@ include_directories(${SDL2_INCLUDE_DIRS})
 set(GLM_DIR ${CMAKE_SOURCE_DIR}/libs/glm)
 include_directories(${GLM_DIR})
 
-# Add source files
-# set(SOURCES
-#     src/main.cpp
-#     src/components/Position.cpp
-#     src/components/Sprite.cpp
-#     src/entities/Entity.cpp
-#     src/systems/System.cpp
-#     src/systems/Renderer.cpp
-#     # Add more source files as needed
-# )
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 
 # Add include directories
-include_directories(include)
+include_directories(
+        src/components
+        src/entities
+        src/systems
+        src
+)
 
 # Add executable
 add_executable(Lame_Engine ${SOURCES})
