@@ -5,12 +5,13 @@ project(Lame_Engine)
 set(CMAKE_CXX_STANDARD 11)
 
 # Find SDL2 package
-find_package(SDL2 REQUIRED)
+#find_package(SDL2 REQUIRED)
 
+set(SDL2_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/libs/sdl2)
 # Add include directories for SDL2
 include_directories(${SDL2_INCLUDE_DIRS})
 
-Set the library directory for GLM
+#Set the library directory for GLM
 set(GLM_DIR ${CMAKE_SOURCE_DIR}/libs/glm)
 include_directories(${GLM_DIR})
 
